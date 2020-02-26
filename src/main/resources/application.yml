@@ -1,11 +1,21 @@
+#配置c3p0线程池数据源
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     password: root
     url: jdbc:mysql://localhost:3306/manager
+    type: com.mchange.v2.c3p0.ComboPooledDataSource
+    maxIdleTime: 60
+    initialPoolSize: 8
+    minPoolZise: 5
+    maxPoolSize: 20
 
+#指定xml文件路径以及映射对象别名设置
 mybatis:
     mapper-locations: classpath:com/zbf/studentmanager/dao/mapper/*.xml
+    type-aliases-package: com.zbf.studentmanager.bean
+
+
 
 
