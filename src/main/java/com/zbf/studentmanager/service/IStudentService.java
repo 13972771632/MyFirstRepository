@@ -6,5 +6,5 @@ import java.util.List;
 
 public interface IStudentService {
 
-    public List<Student> getStudentList();
+    List<Student> getStudentList();
 }
