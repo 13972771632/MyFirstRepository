@@ -11,10 +11,14 @@ spring:
     minPoolZise: 5
     maxPoolSize: 20
 
-#指定xml文件路径以及映射对象别名设置
+#指定Mapper的xml文件路径/映射对象别名
 mybatis:
     mapper-locations: classpath:com/zbf/studentmanager/dao/mapper/*.xml
-    type-aliases-package: com.zbf.studentmanager.bean
+    type-aliases-package: com.zbf.studentmanager.entity
+
+#指定Tomcat的端口
+server:
+  port: 8080
 
 
 

@@ -1,12 +1,10 @@
-package com.zbf.studentmanager.bean;
+package com.zbf.studentmanager.entity;
 
-public class Student {
+public class SchoolClass {
 
-    private Integer id;
+    private  Integer id;
 
     private String name;
-
-    private Integer age;
 
     public Integer getId() {
         return id;
@@ -24,20 +22,12 @@ public class Student {
         this.name = name;
     }
 
-    public Integer getAge() {
-        return age;
-    }
-
-    public void setAge(Integer age) {
-        this.age = age;
-    }
 
     @Override
     public String toString() {
-        return "Student{" +
+        return "SchoolClass{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", age=" + age +
                 '}';
     }
 }

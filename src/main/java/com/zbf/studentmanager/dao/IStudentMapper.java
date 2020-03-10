@@ -1,6 +1,8 @@
 package com.zbf.studentmanager.dao;
 
-import com.zbf.studentmanager.bean.Student;
+import com.zbf.studentmanager.entity.SchoolClass;
+import com.zbf.studentmanager.entity.Student;
+import com.zbf.studentmanager.entity.Teacher;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
@@ -9,4 +11,14 @@ import java.util.List;
 public interface IStudentMapper {
 
     List<Student> getStudentAll();
-}
+
+    Student getStudentById(Integer id);
+
+    List<SchoolClass> getSchoolClassAll();
+
+    List<Teacher> getTeacherAll();
+
+
+ }
+
+
