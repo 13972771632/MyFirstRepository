@@ -10,7 +10,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+
 //zhe shi 2
+
+//这是1
+
 @RestController
 public class StudentController {
 
@@ -21,18 +25,18 @@ public class StudentController {
     public String getStudentAll() {
         List<Student> studentList = studentService.getStudentList();
 
-        String stirng = JSON.toJSONString(studentList);
+        String students = JSON.toJSONString(studentList);
 
-        return stirng;
+        return students;
     }
 
     @RequestMapping(value="/getSchoolClassAll")
     public String getSchoolClass() {
         List<SchoolClass> schoolClassAll = studentService.getSchoolClassAll();
 
-        String stirng = JSON.toJSONString(schoolClassAll);
+        String schoolClassList = JSON.toJSONString(schoolClassAll);
 
-        return stirng;
+        return schoolClassList;
     }
 
     @RequestMapping(value="/getTeacherAll")
@@ -40,9 +44,9 @@ public class StudentController {
 
         List<Teacher> teacherAll =studentService.getTeacherAll();
 
-        String stirng = JSON.toJSONString(teacherAll);
+        String teacherList = JSON.toJSONString(teacherAll);
 
-        return stirng;
+        return teacherList;
     }
 
     @RequestMapping(value="/getStudentById")
@@ -50,9 +54,8 @@ public class StudentController {
 
         Student studentById = studentService.getStudentById(id);
 
-        String stirng = JSON.toJSONString(studentById);
+        String student = JSON.toJSONString(studentById);
 
-        return stirng;
+        return student;
     }
-
 }

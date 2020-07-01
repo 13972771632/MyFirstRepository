@@ -22,7 +22,6 @@ public class SchoolClass {
         this.name = name;
     }
 
-
     @Override
     public String toString() {
         return "SchoolClass{" +
