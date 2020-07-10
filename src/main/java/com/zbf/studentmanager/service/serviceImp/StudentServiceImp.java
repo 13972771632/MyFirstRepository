@@ -32,9 +32,6 @@ public class StudentServiceImp implements IStudentService {
 
     @Override
     public Student getStudentById(Integer id) {
-
         return studentMapper.getStudentById(id );
     }
-
-
 }

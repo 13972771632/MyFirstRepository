@@ -22,27 +22,34 @@ public class StudentController {
         List<Student> studentList = studentService.getStudentList();
         String stirng = JSON.toJSONString(studentList);
         return stirng;
-    }
+        }
 
     @RequestMapping(value="/getSchoolClassAll")
     public String getSchoolClass() {
         List<SchoolClass> schoolClassAll = studentService.getSchoolClassAll();
         String stirng = JSON.toJSONString(schoolClassAll);
         return stirng;
-    }
+        }
 
     @RequestMapping(value="/getTeacherAll")
     public String getTeacherAll() {
         List<Teacher> teacherAll =studentService.getTeacherAll();
         String stirng = JSON.toJSONString(teacherAll);
         return stirng;
+
+
+
+
+
     }
 
     @RequestMapping(value="/getStudentById")
     public String getStudentById(Integer id) {
         Student studentById = studentService.getStudentById(id);
+
         String stirng = JSON.toJSONString(studentById);
         return stirng;
-    }
 
+
+    }
 }

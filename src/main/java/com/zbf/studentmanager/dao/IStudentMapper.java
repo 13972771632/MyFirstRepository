@@ -9,13 +9,16 @@ import java.util.List;
 
 @Mapper
 public interface IStudentMapper {
-
+    //查询所有学生
     List<Student> getStudentAll();
 
+    //根据学生ID查找学生
     Student getStudentById(Integer id);
 
+    //查询所有学校班级
     List<SchoolClass> getSchoolClassAll();
 
+    //查询所有老师
     List<Teacher> getTeacherAll();
 
 }
