@@ -9,7 +9,6 @@ class StudentmanagerApplicationTests {
 	@Test
 	void contextLoads() {
 
-		System.out.println("时间");
 	}
 
 }
