@@ -19,4 +19,3 @@ mybatis:
 #指定Tomcat的端口
 server:
   port: 8084
-  port: 8083
