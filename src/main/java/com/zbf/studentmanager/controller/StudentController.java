@@ -36,20 +36,12 @@ public class StudentController {
         List<Teacher> teacherAll =studentService.getTeacherAll();
         String stirng = JSON.toJSONString(teacherAll);
         return stirng;
-
-
-
-
-
     }
 
     @RequestMapping(value="/getStudentById")
     public String getStudentById(Integer id) {
         Student studentById = studentService.getStudentById(id);
-
         String stirng = JSON.toJSONString(studentById);
         return stirng;
-
-
     }
 }
