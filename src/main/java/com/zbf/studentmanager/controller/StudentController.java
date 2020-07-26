@@ -5,40 +5,43 @@ import com.zbf.studentmanager.entity.SchoolClass;
 import com.zbf.studentmanager.entity.Student;
 import com.zbf.studentmanager.entity.Teacher;
 import com.zbf.studentmanager.service.IStudentService;
+import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
 @RestController
+@Api(tags = "学生管理相关接口")
 public class StudentController {
 
     @Autowired
     private IStudentService studentService;
 
-    @RequestMapping(value="/getListAll")
+    @RequestMapping(value="/getListAll",method = {RequestMethod.GET})
     public String getStudentAll() {
         List<Student> studentList = studentService.getStudentList();
         String stirng = JSON.toJSONString(studentList);
         return stirng;
         }
 
-    @RequestMapping(value="/getSchoolClassAll")
+    @RequestMapping(value="/getSchoolClassAll",method = {RequestMethod.GET})
     public String getSchoolClass() {
         List<SchoolClass> schoolClassAll = studentService.getSchoolClassAll();
         String stirng = JSON.toJSONString(schoolClassAll);
         return stirng;
         }
 
-    @RequestMapping(value="/getTeacherAll")
+    @RequestMapping(value="/getTeacherAll",method = {RequestMethod.GET})
     public String getTeacherAll() {
         List<Teacher> teacherAll =studentService.getTeacherAll();
         String stirng = JSON.toJSONString(teacherAll);
         return stirng;
     }
 
-    @RequestMapping(value="/getStudentById")
+    @RequestMapping(value="/getStudentById",method = {RequestMethod.GET})
     public String getStudentById(Integer id) {
         Student studentById = studentService.getStudentById(id);
         String stirng = JSON.toJSONString(studentById);
